@@ -72,7 +72,7 @@ const check = () => {
                 countZero++
                 result.innerText = `Zeroses! ${countZero} win on move ${move}`
                 field.removeEventListener('click', init)
-            } else if (move === 9) {
+            } else if (move === 9 && !(boxes[arr[i][0]].classList.contains('o') && boxes[arr[i][1]].classList.contains('o') && boxes[arr[i][2]].classList.contains('o')) && !(boxes[arr[i][0]].classList.contains('x') && boxes[arr[i][1]].classList.contains('x') && boxes[arr[i][2]].classList.contains('x'))) {
                 result.innerText = 'No one wins. Happens...'
                 field.removeEventListener('click', init)
         }    
